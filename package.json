@@ -1,0 +1,18 @@
+{
+  "name": "labvue",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@labvue/layer": "workspace:*"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "dev": "bun run --cwd packages/labvue-example dev"
+  }
+}
