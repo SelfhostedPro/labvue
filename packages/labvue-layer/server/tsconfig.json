@@ -1,0 +1,3 @@
+{
+    "extends": "../../labvue-example/.nuxt/tsconfig.server.json"
+}
