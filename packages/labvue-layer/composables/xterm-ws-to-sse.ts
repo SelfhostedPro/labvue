@@ -7,7 +7,7 @@
 
 import type { Terminal, IDisposable, ITerminalAddon } from '@xterm/xterm';
 import type { AttachAddon as IAttachApi } from '@xterm/addon-attach';
-import type { Timer } from ''
+
 interface IAttachOptions {
   bidirectional?: boolean;
   send?: (data: ArrayBuffer | Uint8Array | string) => void;
@@ -31,7 +31,7 @@ export class AttachAddon implements ITerminalAddon, IAttachApi {
 
   public activate(terminal: Terminal): void {
     let messageQueue: (string | ArrayBuffer)[] = [];
-    let messageQueueTimeout: Timer | undefined;
+    let messageQueueTimeout: NodeJS.Timeout | undefined;
 
     // Create function to write to terminal and clear queue
     const throttledFunc = () => {
