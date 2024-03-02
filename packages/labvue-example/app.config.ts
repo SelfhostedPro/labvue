@@ -1,5 +1,5 @@
 export default defineAppConfig({
-    myLayer: {
-      name: 'My amazing Example layer (overwritten)'
-    }
-  })
+  myLayer: {
+    name: 'My amazing Example layer (overwritten)',
+  },
+})

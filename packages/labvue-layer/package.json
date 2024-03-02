@@ -8,19 +8,28 @@
     "build": "nuxt build .playground",
     "generate": "nuxt generate .playground",
     "preview": "nuxt preview .playground",
-    "lint": "eslint .",
     "postinstall": "nuxt prepare .playground"
   },
+  "dependencies": {
+    "@mdi/font": "^7.4.47",
+    "@microsoft/fetch-event-source": "^2.0.1",
+    "@xterm/addon-attach": "^0.10.0-beta.1",
+    "@xterm/addon-fit": "^0.9.0-beta.1",
+    "@xterm/addon-unicode11": "^0.7.0-beta.1",
+    "@xterm/addon-web-links": "^0.10.0-beta.1",
+    "@xterm/xterm": "^5.4.0-beta.1",
+    "c12": "^1.9.0",
+    "confbox": "^0.1.3",
+    "fs-extra": "^11.2.0"
+  },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.1.1",
-    "eslint": "^8.28.0",
+    "@types/fs-extra": "^11.0.4",
+    "@vueuse/nuxt": "latest",
+    "eslint": "^8.57.0",
     "nuxt": "^3.6.2",
-    "typescript": "^4.9.3",
+    "typescript": "^5.3.3",
     "vite-plugin-vuetify": "^2.0.2",
     "vuetify": "^3.5.6",
     "vuetify-nuxt-module": "latest"
-  },
-  "dependencies": {
-    "@mdi/font": "^7.4.47"
   }
 }

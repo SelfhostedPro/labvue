@@ -1,18 +1,30 @@
 {
   "name": "@labvue/example",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@labvue/layer": "workspace:*",
     "nuxt": "^3.10.3",
+    "ping": "^0.4.4",
     "vue": "^3.4.19",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.6.4",
+    "@types/ping": "^0.4.4",
+    "@types/tcp-ping": "^0.1.5",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3",
+    "vue-tsc": "^2.0.0"
   }
 }

@@ -1,3 +1,4 @@
 {
-    "extends": "../../labvue-example/.nuxt/tsconfig.server.json"
+    "extends": "../../labvue-example/.nuxt/tsconfig.server.json",
+    "exclude": []
 }

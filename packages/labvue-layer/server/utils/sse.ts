@@ -1,5 +1,6 @@
 import { createHooks } from 'hookable'
-import { H3Event, setResponseStatus } from 'h3'
+import type { H3Event } from 'h3'
+import { setResponseStatus } from 'h3'
 
 export interface ServerSentEvent {
   [key: string]: <T, R>(data: T) => R | void
@@ -7,7 +8,7 @@ export interface ServerSentEvent {
 
 export const sseHooks = createHooks<ServerSentEvent>()
 
-export const useSSE = (event: H3Event, hookName: string) => {
+export function useServerSSE(event: H3Event, hookName: string) {
   setHeader(event, 'content-type', 'text/event-stream')
   setHeader(event, 'cache-control', 'no-cache')
   setHeader(event, 'connection', 'keep-alive')
@@ -21,13 +22,13 @@ export const useSSE = (event: H3Event, hookName: string) => {
     event.node.res.flushHeaders()
   })
 
-
   const send = (callback: (id: number) => any) => {
     sseHooks.callHook(hookName, callback(id))
   }
 
   const close = (message?: string) => {
-    if (message) sseHooks.callHook(hookName, message)
+    if (message)
+      sseHooks.callHook(hookName, message)
     event.node.res.end()
   }
 
@@ -37,7 +38,7 @@ export const useSSE = (event: H3Event, hookName: string) => {
   }
 
   event._handled = true
-  event.node.req.on("close", close)
+  event.node.req.on('close', close)
 
   return { send, close, error, id }
 }

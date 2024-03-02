@@ -2,17 +2,24 @@
   "name": "labvue",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
+    "@antfu/eslint-config": "^2.6.4",
+    "@labvue/layer": "workspace:*",
+    "@nuxt/eslint-config": "^0.1.1",
     "@types/bun": "latest",
-    "@labvue/layer": "workspace:*"
+    "eslint-plugin-format": "^0.1.0",
+    "prettier": "^3.2.5"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "dev": "bun run --cwd packages/labvue-example dev"
+    "dev": "bun run --cwd packages/labvue-example dev",
+    "lint": "eslint ./packages/labvue-layer && eslint ./packages/labvue-example",
+    "lint:fix": "eslint ./packages/labvue-layer --fix && eslint ./packages/labvue-example --fix"
   }
 }

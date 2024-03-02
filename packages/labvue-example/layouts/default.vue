@@ -1,32 +1,27 @@
-<template>
-    <LayoutsDefault :links="links">
-        <NuxtPage></NuxtPage>
-    </LayoutsDefault>
-</template>
 <script setup lang="ts">
 const links = [
-    {
-        to: "/",
-        icon: "mdi-view-dashboard",
-        text: "Dashboard",
-        divider: true
-    },
-    {
-        text: "Containers",
-        to: "/containers",
-        icon: "mdi-application"
-    },
-    {
-        text: "Tools",
-        icon: "mdi-tools",
-        subLinks: [
-            {
-                text: "Healthcheck",
-                to: "/tools/healthcheck",
-                icon: "mdi-bottle-tonic-plus"
-            }
-        ]
-    }
+  {
+    to: '/',
+    icon: 'mdi-view-dashboard',
+    text: 'Dashboard',
+    divider: true,
+  },
+//   {
+//     text: 'Containers',
+//     to: '/containers',
+//     icon: 'mdi-application',
+//   },
+  {
+    text: 'Tools',
+    icon: 'mdi-tools',
+    subLinks: [
+      {
+        text: 'Healthcheck',
+        to: '/tools/healthcheck',
+        icon: 'mdi-bottle-tonic-plus',
+      },
+    ],
+  },
 ]
 // {
 //     text: "Containers",
@@ -70,3 +65,9 @@ const links = [
 //   text: "Settings"
 // }
 </script>
+
+<template>
+  <LayoutsDefault :links="links">
+    <NuxtPage />
+  </LayoutsDefault>
+</template>
