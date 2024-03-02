@@ -20,6 +20,12 @@
   "scripts": {
     "dev": "bun run --cwd packages/labvue-example dev",
     "lint": "eslint ./packages/labvue-layer && eslint ./packages/labvue-example",
-    "lint:fix": "eslint ./packages/labvue-layer --fix && eslint ./packages/labvue-example --fix"
+    "lint:fix": "eslint ./packages/labvue-layer --fix && eslint ./packages/labvue-example --fix",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "vitepress": "^1.0.0-rc.44"
   }
 }

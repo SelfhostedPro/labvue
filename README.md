@@ -1,4 +1,4 @@
-# @labvue
+# labvue
 
 Labvue was created with the goal of establishing an easy to use development platform with modern dependencies and batteries included for most basic selfhosted apps.
 
@@ -33,6 +33,16 @@ The goal for this is to enable newer developers (or experienced developers with 
     - Additional data views
     - Charts (realtime and not)
     - Plugin system using [jiti](https://github.com/unjs/jiti)
+
+## Technologies in use
+
+- nuxt 3
+  - nuxt 3 layers
+- vue 3
+- vuetify (ui framework)
+- xtermjs (web terminal and communication to backend)
+- c12 (config module)
+- Server Sent Events
 
 To install dependencies:
 
